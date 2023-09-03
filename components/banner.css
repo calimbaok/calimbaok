@@ -1,0 +1,42 @@
+.banner_central {
+  background-size: cover;
+  background-position: bottom;
+  padding: 230px 0;
+}
+
+.banner_central h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner_central p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 0px;
+}
+
+
+#banner-typed-text{
+  color: white;
+  margin-bottom: 3px;
+}
+
+.segmento-presentacion{
+  background-color: #f6f6f6;
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+  padding-right: 30px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-width: 0px 0px 0px 0px;
+  border-color: #eae9e9;
+  border-style: solid;
+}
