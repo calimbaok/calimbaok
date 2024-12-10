@@ -1,0 +1,68 @@
+@import url(footer.css);
+@import url(cards.css);
+.body{
+  margin: 0;
+}
+
+
+/* BANNER */
+.banner_central{
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  padding: 100px 0;
+  min-height: 800px; /* Ajusta este valor según lo alto que necesites */
+}
+
+.banner_central h1 {
+  margin: 0;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 36px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.banner_central p {
+  font-size: 20px;
+  color: white;
+  align-items: center;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner_central h3{
+  color: white;
+  font-style: italic;
+}
+
+.banner_down {
+  background-size: cover;
+  background-position: bottom;
+  padding: 100px 0;
+}
+
+.banner_down h3{
+  color: white;
+  font-style: italic;
+}
+
+.space{
+  padding: 100px 0;
+  min-height: 200px; /* Ajusta este valor según lo alto que necesites */
+}
+
+#rrss a {
+  font-size: 16px;
+  padding: 8px;
+  color: black;
+ 
+}
+
+
+.inline-list {
+  list-style: none;
+  padding-left: 0;
+}  
+

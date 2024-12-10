@@ -4,6 +4,8 @@ section {
   height: 430px;
 }
 
+
+
 section img{
   width: 0px;
   flex-grow: 1;
@@ -13,7 +15,7 @@ section img{
 }
 
 section img:hover{
-  cursor: crosshair;
+  cursor:  zoom-in;
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
