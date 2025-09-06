@@ -810,6 +810,40 @@
               transform: scale(0.85);
           }
       }
+
+      /* Ajuste específico para cenotes en móvil */
+      @media (max-width: 768px) {
+          .exp-freediving {
+              background-size: cover;
+              background-position: center center;
+              transform: scale(0.9);
+          }
+          
+          .experience-fullscreen .exp-freediving {
+              transform: scale(0.85);
+          }
+          
+          .experience-fullscreen:hover .exp-freediving {
+              transform: scale(0.9);
+          }
+      }
+
+      @media (max-width: 480px) {
+          .exp-freediving {
+              background-size: 120% auto;
+              background-position: center center;
+              transform: scale(0.8);
+          }
+          
+          .experience-fullscreen .exp-freediving {
+              transform: scale(0.75);
+          }
+
+          .experience-fullscreen:hover .exp-freediving {
+              transform: scale(0.85);
+          }
+      }
+
     </style>
   </head>
   
