@@ -5,261 +5,940 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="images/favicon-32x32.png"/>
-    <title>Bucea con Calimba</title>
+    <title>Calimba - Vive la Experiencia Subacuática | Buceo & Equipos</title>
     
     <!-- Primary Meta Tags -->
-    <meta name="description" content="Profesionales en el camino, cursos de capacitación, gestión de empresas, development.">
+    <meta name="description" content="Experiencias únicas de buceo: Mar Abierto, Cenotes y Freediving. Equipos técnicos y recreativos de alta gama. Cursos para todos los niveles.">
     
     <!--FACEBOOK-->
     <meta property="og:title" content="Calimba - Buceando por America">
     <meta property="og:image" content= "https://res.cloudinary.com/giseares/image/upload/v1682806041/metaData_snbp8g.png">
     <meta property="og:description" content="Comenzá a Bucear">
-    <meta property="og:site_name" content="Profesionales en el Camino">
+    <meta property="og:site_name" content="Experiencias únicas de buceo: Mar Abierto, Cenotes y Freediving. Equipos técnicos y recreativos de alta gama. Cursos para todos los niveles.">
 
     <!-- Twitter -->
     <meta property="twitter:title" content="Calimba - Buceando por America">
-    <meta property="twitter:description" content="Comenzá a Bucear. Se parte de nuestra comunidad en @combicalimbaok">
+    <meta property="twitter:description" content="Experiencias únicas de buceo: Mar Abierto, Cenotes y Freediving. Equipos técnicos y recreativos de alta gama. Cursos para todos los niveles.">
     <meta property="twitter:image" content= "https://res.cloudinary.com/giseares/image/upload/v1682806041/metaData_snbp8g.png">
     
     <!-- RELACIONES -->
-    <script src="https://kit.fontawesome.com/1c9687f1ac.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="components/style.css">
+      <script src="https://kit.fontawesome.com/1c9687f1ac.js" crossorigin="anonymous"></script>
+      <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+          line-height: 1.6;
+          color: #fff;
+          overflow-x: hidden;
+          background: #000;
+      }
+
+      .hero {
+          height: 100vh;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          overflow: hidden;
+      }
+
+      .hero-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -2;
+      }
+
+      .hero::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle at center, rgba(0,20,40,0.3), rgba(0,0,0,0.8));
+          z-index: -1;
+      }
+
+      .hero-content {
+          position: relative;
+          z-index: 2;
+      }
+
+      .hero-content h1 {
+          font-size: clamp(3rem, 8vw, 8rem);
+          font-weight: 900;
+          margin-bottom: 1rem;
+          text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
+          letter-spacing: 4px;
+          animation: heroText 2s ease-out;
+      }
+
+      .hero-content .tagline {
+          font-size: clamp(1.2rem, 3vw, 2.5rem);
+          margin-bottom: 2rem;
+          font-weight: 300;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+          animation: heroText 2s ease-out 0.3s both;
+          opacity: 0.9;
+      }
+
+      @keyframes heroText {
+          from {
+              opacity: 0;
+              transform: translateY(50px) scale(0.9);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+          }
+      }
+
+      .scroll-indicator {
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: bounce 2s infinite;
+          z-index: 2;
+          color: rgba(255,255,255,0.8);
+          font-size: 2rem;
+          cursor: pointer;
+      }
+
+      @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+          40% { transform: translateX(-50%) translateY(-15px); }
+          60% { transform: translateX(-50%) translateY(-8px); }
+      }
+
+      /* EXPERIENCIAS - Sección Completamente Rediseñada */
+      .experiences-section {
+          padding: 0;
+          background: #000;
+          min-height: 100vh;
+      }
+
+      .experience-fullscreen {
+          height: 100vh;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          cursor: pointer;
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .experience-bg {
+          position: absolute;
+          top: -10%;
+          left: -5%;
+          width: 110%;
+          height: 120%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: all 1.2s ease;
+          filter: brightness(0.7) contrast(1.2);
+          transform: scale(1.0);
+      }
+
+      .experience-fullscreen:hover .experience-bg {
+          transform: scale(1.05);
+          filter: brightness(0.9) contrast(1.3);
+      }
+
+      .experience-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,30,60,0.6), rgba(0,0,0,0.8));
+          z-index: 2;
+          transition: all 0.8s ease;
+      }
+
+      .experience-fullscreen:hover .experience-overlay {
+          background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,30,60,0.4), rgba(0,0,0,0.6));
+      }
+
+      .experience-content-new {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+          max-width: 800px;
+          padding: 0 2rem;
+          transform: translateY(0);
+          transition: all 0.8s ease;
+      }
+
+      .experience-fullscreen:hover .experience-content-new {
+          transform: translateY(-20px);
+      }
+
+      .experience-number {
+          font-size: 8rem;
+          font-weight: 900;
+          opacity: 0.2;
+          position: absolute;
+          top: -3rem;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 4;
+          transition: all 0.8s ease;
+          color: #fff;
+          text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      }
+
+      .experience-fullscreen:hover .experience-number {
+          opacity: 0.3;
+          transform: translateX(-50%) scale(1.1);
+      }
+
+      .experience-title-new {
+          font-size: clamp(2.5rem, 6vw, 5rem);
+          font-weight: 900;
+          margin-bottom: 1.5rem;
+          text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
+          letter-spacing: 3px;
+          position: relative;
+          transition: all 0.6s ease;
+      }
+
+      .experience-fullscreen:hover .experience-title-new {
+          transform: scale(1.05);
+          text-shadow: 6px 6px 12px rgba(0,0,0,0.9);
+      }
+
+      .experience-subtitle {
+          font-size: clamp(1rem, 2.5vw, 1.8rem);
+          margin-bottom: 2rem;
+          opacity: 0.9;
+          font-weight: 300;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      }
+
+      .experience-description-new {
+          font-size: clamp(1rem, 2vw, 1.4rem);
+          line-height: 1.8;
+          margin-bottom: 3rem;
+          opacity: 0.8;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .experience-action {
+          display: inline-block;
+          padding: 0;
+          background: none;
+          border: none;
+          color: #fff;
+          text-decoration: none;
+          position: relative;
+          overflow: hidden;
+          font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          transition: all 0.6s ease;
+      }
+
+      .experience-action::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background: linear-gradient(90deg, transparent, #fff, transparent);
+          transition: all 0.6s ease;
+          transform: translateX(-50%);
+      }
+
+      .experience-fullscreen:hover .experience-action::before {
+          width: 100%;
+      }
+
+      .experience-action::after {
+          content: '→';
+          margin-left: 1rem;
+          transition: all 0.6s ease;
+      }
+
+      .experience-fullscreen:hover .experience-action::after {
+          transform: translateX(10px);
+      }
+
+      /* Backgrounds específicos - CORREGIDOS */
+      .exp-mar {
+          background-image: url('images/Bonaire_2025_OWSI-260.jpg');
+      }
+
+      .exp-cenotes {
+          background-image: url('images/Cave25.png');
+      }
+
+      .exp-freediving {
+          background-image: url('images/pfi.JPG');
+      }
+
+      /* Equipos - Rediseño minimalista */
+      .equipment-section {
+          padding: 10vh 5vw;
+          background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+          min-height: 80vh;
+          display: flex;
+          align-items: center;
+      }
+
+      .equipment-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          width: 100%;
+      }
+
+      .equipment-title {
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          font-weight: 900;
+          text-align: center;
+          margin-bottom: 5rem;
+          letter-spacing: 2px;
+          opacity: 0.9;
+      }
+
+      .equipment-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+          gap: 5rem;
+          align-items: center;
+      }
+
+      .equipment-item {
+          position: relative;
+          text-align: center;
+          transition: all 0.8s ease;
+      }
+
+      .equipment-item:hover {
+          transform: translateY(-20px);
+      }
+
+      .equipment-brand-name {
+          font-size: clamp(2rem, 8vw, 4rem);
+          font-weight: 900;
+          margin-bottom: 2rem;
+          letter-spacing: 4px;
+          background: linear-gradient(135deg, #fff, #ccc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          transition: all 0.6s ease;
+      }
+
+      .equipment-item:hover .equipment-brand-name {
+          background: linear-gradient(135deg, #fff, #4a90e2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          transform: scale(1.05);
+      }
+
+      .equipment-description {
+          font-size: clamp(1rem, 2vw, 1.3rem);
+          opacity: 0.8;
+          line-height: 1.8;
+          max-width: 500px;
+          margin: 0 auto 3rem;
+      }
+
+      .equipment-contact {
+          display: inline-block;
+          color: #fff;
+          text-decoration: none;
+          font-size: clamp(1rem, 2vw, 1.2rem);
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          position: relative;
+          transition: all 0.6s ease;
+      }
+
+      .equipment-contact::before {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+          transition: all 0.6s ease;
+          transform: translateX(-50%);
+      }
+
+      .equipment-item:hover .equipment-contact::before {
+          width: 100%;
+      }
+
+      /* Cursos - Simplificado */
+      .courses-section {
+          padding: 10vh 5vw;
+          background: #000;
+          text-align: center;
+      }
+
+      .courses-title {
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          font-weight: 900;
+          margin-bottom: 3rem;
+          letter-spacing: 2px;
+      }
+
+      .courses-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
+          max-width: 1000px;
+          margin: 0 auto 5rem;
+      }
+
+      .course-simple {
+          padding: 2rem 1rem;
+          background: rgba(255,255,255,0.05);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          border: 1px solid rgba(255,255,255,0.1);
+          transition: all 0.6s ease;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .course-simple:hover {
+          background: rgba(255,255,255,0.1);
+          transform: translateY(-10px);
+          border-color: rgba(255,255,255,0.2);
+      }
+
+      /* EFECTO HOVER ESPECIAL PARA "PROFESIONAL" */
+      .course-simple.professional {
+          position: relative;
+      }
+
+      .course-simple.professional::before {
+          content: '';
+          position: absolute;
+          top: -100%;
+          left: -100%;
+          width: 300%;
+          height: 300%;
+          background: radial-gradient(circle, rgba(74,144,226,0.1) 0%, transparent 70%);
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transform: scale(0);
+          z-index: 1;
+      }
+
+      .course-simple.professional:hover::before {
+          transform: scale(1);
+          top: -50%;
+          left: -50%;
+      }
+
+      .course-simple.professional::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 2px solid rgba(74,144,226,0);
+          border-radius: 20px;
+          transition: all 0.6s ease;
+          z-index: 2;
+      }
+
+      .course-simple.professional:hover::after {
+          border-color: rgba(74,144,226,0.5);
+          box-shadow: 
+              0 0 20px rgba(74,144,226,0.3),
+              inset 0 0 20px rgba(74,144,226,0.1);
+      }
+
+      .course-simple.professional:hover {
+          background: linear-gradient(135deg, rgba(74,144,226,0.15), rgba(0,30,60,0.2));
+          border-color: rgba(74,144,226,0.4);
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(74,144,226,0.2);
+      }
+
+      .course-simple.professional h3,
+      .course-simple.professional p {
+          position: relative;
+          z-index: 3;
+      }
+
+      .course-simple.professional:hover h3 {
+          color: #4a90e2;
+          text-shadow: 0 0 10px rgba(74,144,226,0.5);
+          transform: scale(1.05);
+      }
+
+      .course-simple.professional:hover p {
+          color: rgba(255,255,255,0.95);
+      }
+
+      /* Animación de pulso sutil para profesional */
+      @keyframes professionalPulse {
+          0% { box-shadow: 0 0 0 0 rgba(74,144,226,0.4); }
+          50% { box-shadow: 0 0 0 10px rgba(74,144,226,0.1); }
+          100% { box-shadow: 0 0 0 0 rgba(74,144,226,0); }
+      }
+
+      .course-simple.professional {
+          animation: professionalPulse 3s infinite;
+      }
+
+      .course-simple.professional:hover {
+          animation: none;
+      }
+
+      /* Resto del CSS original */
+      .course-simple h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          transition: all 0.4s ease;
+      }
+
+      .course-simple p {
+          opacity: 0.8;
+          font-size: 0.9rem;
+          transition: all 0.4s ease;
+      }
+
+      /* CTA Final */
+      .cta-final {
+          padding: 15vh 5vw;
+          text-align: center;
+          background: linear-gradient(135deg, #000428, #004e92);
+          position: relative;
+          overflow: hidden;
+      }
+
+      .cta-final::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="20" cy="10" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="15" r="1.5" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="5" r="1" fill="%23ffffff" opacity="0.1"/></svg>') repeat;
+          animation: stars 20s linear infinite;
+      }
+
+      @keyframes stars {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100px); }
+      }
+
+      .cta-final h2 {
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          font-weight: 900;
+          margin-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+          letter-spacing: 2px;
+      }
+
+      .cta-final p {
+          font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+          margin-bottom: 4rem;
+          opacity: 0.9;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          z-index: 2;
+      }
+
+      .cta-contacts {
+          display: flex;
+          gap: 3rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          position: relative;
+          z-index: 2;
+      }
+
+      .contact-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 1rem;
+          color: #fff;
+          text-decoration: none;
+          font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+          font-weight: 600;
+          letter-spacing: 1px;
+          transition: all 0.6s ease;
+          position: relative;
+          padding: 1rem 2rem;
+      }
+
+      .contact-link::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 2px solid rgba(255,255,255,0.3);
+          border-radius: 50px;
+          transition: all 0.6s ease;
+      }
+
+      .contact-link:hover::before {
+          border-color: rgba(255,255,255,0.8);
+          transform: scale(1.05);
+      }
+
+      .contact-link:hover {
+          transform: translateY(-5px);
+      }
+
+      /* WhatsApp flotante con logo oficial CORREGIDO */
+      .whatsapp-float {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          width: 60px;
+          height: 60px;
+          background: #25d366;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          z-index: 1000;
+          transition: all 0.6s ease;
+          box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+      }
+
+      .whatsapp-float svg {
+          width: 32px;
+          height: 32px;
+          fill: white;
+      }
+
+      .whatsapp-float:hover {
+          transform: scale(1.1) translateY(-5px);
+          box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+          background: #128c7e;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+          .equipment-grid {
+              grid-template-columns: 1fr;
+              gap: 3rem;
+          }
+          
+          .cta-contacts {
+              flex-direction: column;
+              align-items: center;
+              gap: 2rem;
+          }
+          
+          .courses-grid {
+              grid-template-columns: repeat(2, 1fr);
+          }
+      }
+
+      @media (max-width: 480px) {
+          .courses-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+
+      footer{
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #1E1A23;
+      }
+      footer .content{
+        max-width: 1350px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      footer .content p,a{
+        color: #fff;
+      }
+      footer .content .box{
+        width: 33%;
+        transition: all 0.4s ease;
+      }
+      footer .content .topic{
+        font-size: 12px;
+        font-weight: 200;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      footer .content p{
+        text-align: justify;
+        font-size: 12px;
+      }
+      footer .content .lower .topic{
+        margin: 24px 0 5px 0;
+        font-size: 12px;
+      }
+      footer .content .lower i{
+        padding-right: 16px;
+      }
+      footer .content .middle{
+        padding-left: 80px;
+      }
+      footer .content .middle a{
+        line-height: 3px;
+        font-size: 12px;
+      }
+      footer .content .media-icons a{
+        font-size: 36px;
+        height: 45px;
+        width: 45px;
+        display: inline-block;
+        text-align: center;
+        line-height: 43px;
+        border-radius: 5px;
+        border: 2px solid #222222;
+        margin: 0px 5px 0 0;
+        transition: all 0.3s ease;
+      }
+      .content .media-icons a:hover{
+        border-color: rgb(250, 191, 82);
+      }
+      footer .bottom{
+        width: 100%;
+        text-align: right;
+        color: #d9d9d9;
+        padding: 0 40px 5px 0;
+      }
+
+      footer a{
+        transition: all 0.3s ease;
+      }
+      footer a:hover{
+        color: $four;
+      }
+      footer ul{
+        list-style: none;
+      }
+
+      @media (max-width:1100px) {
+        footer .content .middle{
+          padding-left: 50px;
+        }
+      }
+      @media (max-width:950px){
+        footer .content .box{
+          width: 50%;
+        }
+        .content .right{
+          margin-top: 40px;
+        }
+      }
+      @media (max-width:560px){
+        footer{
+          position: relative;
+        }
+        footer .content .box{
+          width: 100%;
+          margin-top: 30px;
+        }
+        footer .content .middle{
+          padding-left: 0;
+        }
+      }
+
+      .fa-heart {
+        color: red;
+      }
+    </style>
   </head>
   
   <body>
-    <!--NAVBAR-->
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/favicon-32x32.png" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://cernuschiflorencia.github.io/coach/">Coach Profesional</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pa.html">Primeros Auxilios</a>
-              </li>
-          </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="images/0906.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-content">
+            <h1>CALIMBA</h1>
+            <div class="tagline">Vive la Experiencia Subacuática</div>
         </div>
-      </div>
-    </div>
-    <!--BANNER-->
-    <div class="banner_central" alt= "Buceo Banner Inicial - @combicalimba" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/buceo_banner_inicial_dfmciz.jpg)">
-      <div class="container">
-        <div class= "text-center">
-          <h1>Buceo</h1>
-          <p>Aprende a bucear hoy.</p>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- EXPERIENCIAS - Completamente Rediseñadas -->
+    <section class="experiences-section">
+        <!-- Mar Abierto -->
+        <div class="experience-fullscreen" onclick="window.open('https://wa.me/541153842626?text=Quiero reservar una experiencia de buceo en mar abierto', '_blank')">
+            <div class="experience-bg exp-mar"></div>
+            <div class="experience-overlay"></div>
+            <div class="experience-content-new">
+                <div class="experience-number">01</div>
+                <h2 class="experience-title-new">MAR ABIERTO</h2>
+                <p class="experience-subtitle">El Azul Infinito Te Espera</p>
+                <p class="experience-description-new">
+                    Sumérgete en la inmensidad del océano donde cada metro de profundidad 
+                    revela secretos ancestrales. Arrecifes vibrantes, vida pelágica majestuosa 
+                    y la sensación de libertad absoluta en el reino azul.
+                </p>
+                <span class="experience-action">Sumergirse Ahora</span>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!--BUCEO INTRO-->
-    <div class="container mt-5">
-      <p>
-        En uno de nuestros viajes vivimos una experiencia de buceo inigualable, siempre decimos que nunca vuelves a ser el mismo cuando salís de una inmersión. 
-        En nuestro caso en particular una experiencia de buceo no solo nos llevó a descubrir el mundo subacuático, sino que también nos llevó a cambiar nuestro estilo de vida, a partir de ese momento nos volvimos dos apasionadas por el mundo subacuático. 
-      </p>
-      <p>
-        Realizamos el curso inicial de buceo, luego hicimos el nivel avanzado, rescue diver y cuando nos dimos cuenta estábamos entrenando para convertirnos en profesionales del buceo. Descubrimos que la carrera para convertirse en instructor de buceo es realmente apasionante, aprendimos que el arte de enseñar acompañado de una buena metodología, entrenamiento y formación robusta nos permitía mostrarles a muchas personas el mundo que nos apasiona.
-      </p>
-    </div>
-
-    <div class="container text-center my-5">
-      <h3>Cuales son nuestros cursos disponibles</h3>
-
-    </div>
-
-    <!--BUCEO CARDS-->
-    <div class="container">
-      <div class="d-flex justify-content-around mb-5 row">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_discover.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
+        <!-- Cenotes -->
+        <div class="experience-fullscreen" onclick="window.open('https://wa.me/541153842626?text=Quiero vivir la experiencia de buceo en cenotes', '_blank')">
+            <div class="experience-bg exp-cenotes"></div>
+            <div class="experience-overlay"></div>
+            <div class="experience-content-new">
+                <div class="experience-number">02</div>
+                <h2 class="experience-title-new">CENOTES</h2>
+                <p class="experience-subtitle">Catedrales Subterráneas Sagradas</p>
+                <p class="experience-description-new">
+                    Atraviesa portales hacia mundos ocultos donde la luz solar crea 
+                    espectáculos divinos. Formaciones milenarias, aguas cristalinas 
+                    y el silencio sagrado de las profundidades terrestres.
+                </p>
+                <span class="experience-action">Explorar Misterios</span>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">¿Quieres saber lo que es el buceo?</h5>
-                <p class="card-text">En muy poco tiempo, aprenderás las habilidades básicas de buceo y respirarás por primera vez bajo el agua.</p>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_inicial_ubneev.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
+
+        <!-- Freediving -->
+        <div class="experience-fullscreen" onclick="window.open('https://wa.me/541153842626?text=Me interesa la experiencia de Freediving', '_blank')">
+            <div class="experience-bg exp-freediving"></div>
+            <div class="experience-overlay"></div>
+            <div class="experience-content-new">
+                <div class="experience-number">03</div>
+                <h2 class="experience-title-new">FREEDIVING</h2>
+                <p class="experience-subtitle">La Libertad en Su Forma Más Pura</p>
+                <p class="experience-description-new">
+                    Conecta con tu esencia más profunda. Solo tú, tu respiración y 
+                    el océano infinito. Descubre límites que nunca creíste posibles 
+                    en esta danza ancestral entre humano y mar.
+                </p>
+                <span class="experience-action">Encontrar Libertad</span>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">La aventura comienza aqui</h5>
-                <p class="card-text">Comenza este camino del buceo con el curso Inicial <strong> "Open Water Diver"</strong>, segui luego<strong>  "Advanced Open Water Diver"</strong> y culmina con el curso mas divertido de todos: <strong> "Rescue Diver"</strong></p>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_naufragio.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Especialidades</h5>
-                <p class="card-text">Ya sos buzo certificado? Tenemos mas opciones para que sigas aprendiendo:</p>
-                <div class="d-flex justify-content-center">
-                  <ul class="text-left mr-3">
-                    <li>Deep Diver</li>
-                    <li>Solo Diver</li>
-                  </ul>
-                  <ul class="text-left">
-                    <li>Sidemount</li>
-                    <li>Naufragios</li>
-                  </ul>
-                  <ul class="text-left">
-                    <li>Dry Suit</li>
-                    <li>Nitrox</li>
-                  </ul>  
+    </section>
+
+    <!-- EQUIPOS -->
+    <section class="equipment-section">
+        <div class="equipment-container">
+            <h2 class="equipment-title">Equipos Profesionales</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <h4 class="equipment-brand-name">Sistema de equipo técnico</h4>
+                    <p class="equipment-description">
+                        Sistemas de buceo técnico que han revolucionado la exploración subacuática mundial. 
+                        Configuraciones sidemount y backmount de vanguardia para los más exigentes.
+                    </p>
+                    <a href="https://wa.me/541153842626?text=Quiero información sobre equipos tecnicos" target="_blank" class="equipment-contact">Equipo técnico</a>
                 </div>
-              </div>
+                
+                <div class="equipment-item">
+                    <h4 class="equipment-brand-name">Equipo recreativo</h4>
+                    <p class="equipment-description">
+                        Innovación italiana en equipamiento subacuático. Desde reguladores de alta performance 
+                        hasta sistemas de iluminación que transforman las profundidades.
+                    </p>
+                    <a href="https://wa.me/541153842626?text=Quiero información sobre equipos recreativos" target="_blank" class="equipment-contact">Equipo recreativo</a>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_profesional.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Convertite en Profesional!</h5>
-                <p class="card-text">Tu camino profesional, arranca aqui. Convertite en <strong>Divemaster</strong>, <strong>Assistant Instructor</strong> o <strong>Instructor de Primeros Auxilios</strong>.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_snorkel.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Snorkeler</h5>
-                <p class="card-text">Es una actividad genial para las vacaciones, permite observar peces y arrecifes cerca de la playa. Este deporte te permite acercarte a la vida subaquatica de una manera segura.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/buceo_empresas.jpg" alt="Buceo Inicial - ph: @combicalimbaok" class= "img-fluid rounded-start mt-2">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Empresas</h5>
-                <p class="card-text">El buceo es una excelente actividad para trabajar aspectos de Team Building, como: confianza dentro del sistema de compañeros, control del estrés y resolución lógica de problemas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <div class="text-center mb-2">
-        <h3>¿Queres saber mas?</h3>
-        <a class="btn btn-outline-dark"  target="_blank" href="https://api.whatsapp.com/send?phone=5491153842626&text=buceo">Sumate a esta aventura</a>
-      </div>
-    </div>
-
-
-
-    <!--BUCEO METODOLOGIA-->
-    <div class="container mt-5">
-      <h3>Nuestra metodología:</h3>
-      <p>
-        Hoy somos dos instructoras de buceo con amplia experiencia en diferentes entornos, recorremos el continente ofreciendo nuestros servicios de formación para que vos puedas alcanzar tu certificación a nivel internacional, además de nuestra experiencia en buceo recreativo contamos con seis especialidades por el momento. 
-        Somos las creadoras de un hermoso proyecto llamado Calimba – Buceando por América y dueñas del centro de buceo <strong>Calimba SDI DIVE CENTER #1005056</strong>. 
-        Tambien somos instructoras PADI <br>
-        Te invitamos a que descubras el único deporte donde todos ganan, te invitamos a bucear.
-      </p>
-      <p>
-        Al inscribirte en tu curso de buceo obtendrás tu material de estudio oficial en formato digital, esto significa que tendrás acceso a nuestra plataforma e-learning donde tendrás disponible tu material de lectura, videos y exámenes. Estaremos en contacto contigo durante todo el proceso de aprendizaje y podrás canalizar tus consultas por medio de la plataforma o por whatsapp, adicionalmente tendrás que asistir a las clases virtuales pactadas con tu instructor, con quien también coordinaras tus clases prácticas en aguas confinadas (pileta/ piscina).  Una vez finalizada la parte teórica y práctica de entrenamiento en aguas confinadas estarás listo para rendir tu examen práctico en aguas abiertas, donde tu instructor te tomara algunas de las habilidades trabajadas durante tu entrenamiento. Habiendo cumplido satisfactoriamente con cada uno de estos puntos, solo debes esperar unos minutos para festejar y salir a estrenar tu credencial.
-      </p>
-    </div>
-
-    <!--INSTRUCOTRAS-->
-    <div class="container mt-5">
-      <h3>Las instructoras:</h3>
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 3"></button>
+    <!-- CURSOS -->
+    <section class="courses-section equipment-item">
+        <h2 class="courses-title">Da un paso más allá</h2>
+        <p class="courses-simple">Explora nuestros cursos y lleva tus habilidades al siguiente nivel.</p>
+        <br>
+        <br>
+        <div class="courses-grid">
+            <div class="course-simple">
+                <h3>Open Water</h3>
+                <p>Tu puerta al mundo subacuático</p>
+            </div>
+            <div class="course-simple">
+                <h3>Advanced</h3>
+                <p>Perfecciona tus habilidades</p>
+            </div>
+            <div class="course-simple">
+                <h3>Rescue Diver</h3>
+                <p>El curso más transformador</p>
+            </div>
+            <div class="course-simple">
+                <h3>Refresher</h3>
+                <p>¿Hace cuanto no buceas?</p>
+            </div>
+            <div class="course-simple">
+                <h3>Freediving PFI</h3>
+                <p>Apnea deportiva fundamental</p>
+            </div>
+            <div class="course-simple">
+                <h3>Cuevas</h3>
+                <p>Inicia tu aventura en el mundo subterráneo</p>
+            </div>
+            <div class="course-simple">
+                <h3>Profundo</h3>
+                <p>Especialidad en buceo profundo</p>
+            </div>
+            <div class="course-simple professional">
+                <h3>Profesional</h3>
+                <p>Divemaster e Instructor</p>
+            </div>
         </div>
-        <div class="carousel-inner" id="text-white">
-          <div class="carousel-item">
-            <img src="/images/instructoras_mar_rojo.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">Buceando en el Mar Rojo</h5>
-              <p></p>
-            </div>
-          </div>
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/images/instructoras_san_juan.jpg" class="d-block w-100" alt="San Juan">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">San Juan</h5>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="images/instructoras_thailandia.png" class="d-block w-100" alt="Thailandia">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">Thailandia</h5>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="images/instructoras_bonito.jpg" class="d-block w-100" alt="Bonito">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">Bonito</h5>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="images/instructoras_sdi.jpg" class="d-block w-100" alt="Paraguay">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">Paraguay </h5>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="images/instructoras_miami.jpg" class="d-block w-100" alt="Miami">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 style="color:aliceblue">Miami</h5>
-            </div>
-          </div>
+
+        <a href="https://wa.me/541153842626?text=Quiero información sobre cursos de buceo" target="_blank" class="equipment-contact">Consultar Cursos</a>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <h2>Tu Aventura Comienza Ahora</h2>
+        <p>El océano guarda secretos que solo los valientes descubren. ¿Estás listo para la transformación?</p>
+        
+        <div class="cta-contacts">
+            <a href="https://wa.me/541153842626?text=¡Estoy listo para comenzar mi aventura subacuática con Calimba!" target="_blank" class="contact-link">
+                📱 WhatsApp
+            </a>
+            <a href="https://www.instagram.com/combicalimbaok/" target="_blank" class="contact-link">
+                📷 Instagram
+            </a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      
-    </div>
+    </section>
+
+    <!-- WhatsApp flotante con logo oficial -->
+    <a href="https://wa.me/541153842626?text=Hola! Quiero vivir una experiencia increíble con Calimba" target="_blank" class="whatsapp-float" title="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
 
     <!--FOOTER-->
     <footer>
@@ -287,6 +966,63 @@
         </div> 
       </div>  
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+        // Parallax effect mejorado - COMPLETAMENTE NUEVO
+        let ticking = false;
+        
+        function updateParallax() {
+            const experiences = document.querySelectorAll('.experience-fullscreen');
+            
+            experiences.forEach((experience) => {
+                const rect = experience.getBoundingClientRect();
+                const bg = experience.querySelector('.experience-bg');
+                
+                // Solo aplicar cuando está visible en pantalla
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const scrollPercent = -rect.top / window.innerHeight;
+                    const yPos = scrollPercent * 50; // Movimiento más sutil
+                    bg.style.transform = `translateY(${yPos}px) scale(1.05)`;
+                }
+            });
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // Smooth scrolling para el indicador
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            document.querySelector('.experiences-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animaciones
+        document.querySelectorAll('.equipment-item, .course-simple').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
   </body>
 </html>
