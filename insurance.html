@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALIMBAS x Assist 365 | Viaja Seguro</title>
+
+    <link rel="icon" type="image/jpg" href="images/favicon-32x32.png"/>
+
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components/footer.css">
+    
+
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section Styling */
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+                        url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Banner de Descuento */
+        .discount-card {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+        }
+
+        /* Animación para el botón flotante de WhatsApp */
+        .floating-button {
+            animation: pulse-wa 2s infinite;
+        }
+
+        @keyframes pulse-wa {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .btn-bounce:active {
+            transform: scale(0.95);
+        }
+
+        /* ✅ FIX: Neutraliza el override de cards.css que pisa .container en mobile */
+        @media (max-width: 720px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+        }
+        @media (max-width: 540px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+        }
+
+        /* ✅ FIX: Neutraliza .description global de cards.css */
+        section .description {
+            padding: 0 !important;
+            max-width: unset !important;
+            height: auto !important;
+            background: none !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 md:py-4 shadow-sm">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-bold tracking-tighter text-teal-700 no-underline cursor-pointer">
+              CALIMBAS <span class="text-gray-400 font-light">| Travel</span>
+            </a>
+            <a href="https://wa.me/5491153842626" target="_blank" class="text-teal-600 font-semibold flex items-center gap-2 text-sm md:text-base hover:text-teal-800 transition">
+                <i class="fab fa-whatsapp text-xl md:text-2xl text-green-500"></i>
+                <span class="hidden sm:inline">¿Dudas? Escríbenos</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient min-h-[70vh] md:h-[80vh] flex items-center justify-center text-center text-white px-4 md:px-6 py-12">
+        <div class="max-w-3xl">
+            <h1 class="text-3xl md:text-6xl font-extrabold mb-4 md:mb-6 leading-tight tracking-tight">
+                Recorre el mundo con la misma tranquilidad que nosotros
+            </h1>
+            <p class="text-base md:text-xl mb-8 md:mb-10 font-light text-gray-100 leading-relaxed">
+                Tras 8 años en la ruta hacia Alaska, elegimos <strong>Assist 365</strong> por ser el único que entiende nuestro estilo de vida y protege lo que más amamos.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://assist-365.com" target="_blank" class="btn-bounce bg-teal-500 hover:bg-teal-600 text-white px-8 md:px-12 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-teal-500/30 text-center uppercase tracking-wide">
+                    <i class="fas fa-calculator mr-2"></i> Cotiza ahora
+                </a>
+                <a href="https://wa.me/5491153842626" target="_blank" class="btn-bounce bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 md:px-12 py-4 rounded-full font-bold text-lg transition-all shadow-lg text-center uppercase tracking-wide">
+                    <i class="fab fa-whatsapp mr-2"></i> Consultanos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Beneficio Exclusivo -->
+    <section class="px-4 md:px-6 mt-16 md:mt-24 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="discount-card rounded-2xl md:rounded-3xl p-6 md:p-12 text-white shadow-2xl
+                    flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-10
+                    border-4 border-white/10">
+          <div class="text-center md:text-left max-w-xl mb-6 md:mb-0">
+            <h2 class="text-2xl md:text-4xl font-black mb-2 uppercase tracking-tight italic">
+              Beneficio Calimbas
+            </h2>
+            <p class="text-teal-50 text-sm md:text-lg opacity-90">
+              Usa nuestro código para obtener un descuento especial en tu cobertura.
+            </p>
+          </div>
+          <div class="bg-white/10 border-2 border-dashed border-white/40
+                      p-4 md:p-6 rounded-xl md:rounded-2xl
+                      text-center w-full md:w-auto min-w-[220px]
+                      cursor-pointer hover:bg-white/20 transition"
+              onclick="copyCode()">
+            <span class="block text-xs uppercase tracking-widest mb-1 opacity-80">
+              Tu Código (Clic para copiar):
+            </span>
+            <span id="coupon" class="text-3xl md:text-5xl font-black tracking-[0.2em] text-white">
+              CALIMBAS
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia y Valores (Mascotas y Buceo) -->
+    <section class="py-16 md:py-24 container mx-auto px-4 md:px-6">
+        <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div class="order-2 md:order-1 relative">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop" alt="Buceo Autónomo" class="rounded-2xl md:rounded-[3rem] shadow-2xl w-full h-auto object-cover border-8 border-white">
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl hidden md:flex items-center gap-3">
+                    <i class="fas fa-certificate text-teal-600 text-3xl"></i>
+                    <p class="text-sm font-bold text-gray-800">Alianza Oficial</p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 md:mb-6 text-gray-800 leading-tight">¿Por qué elegimos Assist 365?</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-sm md:text-lg">
+                    Como viajeros y buceadores, buscábamos un respaldo que no nos pusiera límites. Nos afiliamos a Assist 365 porque son de los pocos que ofrecen cobertura real para <strong>Buceo Autónomo</strong> y cuidan de nuestras <strong>mascotas</strong>, dos pilares innegociables en nuestra vida nómada.
+                </p>
+                <div class="space-y-4 md:space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-teal-100 p-3 rounded-xl text-teal-600 mt-1 flex-shrink-0">
+                            <i class="fas fa-paw text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Protección para Mascotas</h4>
+                            <p class="text-gray-500 text-sm md:text-base">Asistencia veterinaria y gastos de urgencia para que ellos viajen protegidos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-teal-100 p-3 rounded-xl text-teal-600 mt-1 flex-shrink-0">
+                            <i class="fas fa-water text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Buceo Autónomo Incluido</h4>
+                            <p class="text-gray-500 text-sm md:text-base">Una cobertura deportiva real para que explores el mar sin preocupaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares de Beneficios -->
+    <section style="background:#ffffff; padding: 80px 0; border-top: 1px solid #f3f4f6; border-bottom: 1px solid #f3f4f6; display:block; position:static; width:100%; box-sizing:border-box;">
+        <div style="max-width:1100px; margin:0 auto; padding: 0 24px; box-sizing:border-box;">
+            <h2 style="font-size:clamp(1.4rem,4vw,2.2rem); font-weight:800; text-align:center; color:#1f2937; margin-bottom:48px;">Beneficios Clave</h2>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+                <!-- 1 -->
+                <div style="background:#f9fafb; padding:32px; border-radius:24px; border:1px solid #f3f4f6;">
+                    <i class="fas fa-user-md" style="font-size:2.2rem; color:#14b8a6; display:block; margin-bottom:20px;"></i>
+                    <h3 style="font-size:1.1rem; font-weight:700; color:#134e4a; margin-bottom:10px;">Asistencia 24/7</h3>
+                    <p style="color:#6b7280; font-size:0.9rem; line-height:1.6; margin:0;">Atención en tu idioma en cualquier país, a cualquier hora.</p>
+                </div>
+                <!-- 2 -->
+                <div style="background:#f9fafb; padding:32px; border-radius:24px; border:1px solid #f3f4f6;">
+                    <i class="fas fa-laptop" style="font-size:2.2rem; color:#14b8a6; display:block; margin-bottom:20px;"></i>
+                    <h3 style="font-size:1.1rem; font-weight:700; color:#134e4a; margin-bottom:10px;">Protección Tech</h3>
+                    <p style="color:#6b7280; font-size:0.9rem; line-height:1.6; margin:0;">Cubre tus equipos de trabajo como laptops, cámaras y drones.</p>
+                </div>
+                <!-- 3 -->
+                <div style="background:#f9fafb; padding:32px; border-radius:24px; border:1px solid #f3f4f6;">
+                    <i class="fas fa-plane-arrival" style="font-size:2.2rem; color:#14b8a6; display:block; margin-bottom:20px;"></i>
+                    <h3 style="font-size:1.1rem; font-weight:700; color:#134e4a; margin-bottom:10px;">Flexibilidad Nómada</h3>
+                    <p style="color:#6b7280; font-size:0.9rem; line-height:1.6; margin:0;">Contrata incluso si ya estás en viaje y fuera de tu país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasos para aplicar el código -->
+    <section style="background:#f9fafb; padding: 80px 0; display:block; position:static; width:100%; box-sizing:border-box;">
+        <div style="max-width:900px; margin:0 auto; padding: 0 24px; box-sizing:border-box; text-align:center;">
+            <h2 style="font-size:clamp(1.4rem,4vw,2.2rem); font-weight:800; font-style:italic; margin-bottom:48px; color:#111827;">¿Cómo obtener el descuento?</h2>
+            <div style="display:flex; flex-direction:column; gap:20px; align-items:flex-start; max-width:400px; margin:0 auto;">
+                <div style="display:flex; align-items:center; gap:16px;">
+                    <div style="min-width:48px; height:48px; background:#0d9488; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem;">1</div>
+                    <p style="margin:0; font-size:0.85rem; font-weight:700; color:#374151; text-transform:uppercase; letter-spacing:0.05em;">Entra a la web oficial</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:16px;">
+                    <div style="min-width:48px; height:48px; background:#0d9488; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem;">2</div>
+                    <p style="margin:0; font-size:0.85rem; font-weight:700; color:#374151; text-transform:uppercase; letter-spacing:0.05em;">Carga tus datos</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:16px;">
+                    <div style="min-width:48px; height:48px; background:#14b8a6; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem; box-shadow:0 0 0 6px #ccfbf1;">3</div>
+                    <p style="margin:0; font-size:0.85rem; font-weight:900; color:#0d9488; text-transform:uppercase; letter-spacing:0.05em;">Código: CALIMBAS</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:16px;">
+                    <div style="min-width:48px; height:48px; background:#0d9488; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:1.2rem;">4</div>
+                    <p style="margin:0; font-size:0.85rem; font-weight:700; color:#374151; text-transform:uppercase; letter-spacing:0.05em;">Viaja seguro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer de Cierre -->
+    <footer class="py-20 md:py-28 bg-teal-900 text-white text-center px-4 md:px-6 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight italic">¿Listo para explorar el mundo?</h2>
+            <div class="flex flex-col gap-4 items-center">
+                <a href="https://assist-365.com" target="_blank" class="btn-bounce w-full sm:w-auto bg-teal-500 hover:bg-teal-600 px-10 md:px-16 py-5 rounded-full font-black text-xl md:text-2xl transition-all shadow-2xl uppercase tracking-widest">
+                    COTIZA CON CALIMBAS
+                </a>
+                <a href="https://wa.me/5491153842626" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-4 rounded-full font-bold text-base transition-all">
+                    <i class="fab fa-whatsapp text-green-400 text-xl"></i> Habla con nosotros
+                </a>
+            </div>
+            <div class="mt-20 pt-8 border-t border-white/10 opacity-40 text-xs md:text-sm tracking-widest font-bold uppercase">
+                <p>©️ 2024 CALIMBAS Travel - Afiliados Oficiales Assist 365</p>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER-->
+    <footer>
+      <div class="content mb-0">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic"><strong>Lo que creemos</strong></div>
+            <p>"Nuestro pasado, nuestro presente y lo que queda de nuestro futuro
+            depende absolutamente de lo que haremos hoy".</p>
+            <p> Silvya Earle</p>
+          </div>
+        </div>
+
+        <div class="right box text-right">
+          <div class="topic"><strong>Redes Sociales</strong></div>
+            <div class="media-icons">
+              <a href="https://www.instagram.com/combicalimbaok/" target="_blank">
+                <i class="fa-brands fa-instagram text-white text-2xl"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UC6gKILvZxRGYUyy86tbJ9VA" target="_blank">
+                <i class="fa-brands fa-youtube text-white text-2xl"></i>
+              </a>
+            </div>
+            <div class="footer-copyright">
+              <p class="text-right">Comparti con <i class="fas fa-heart" ></i>  <br>
+              Copyright © 2023 <strong>giseAres</strong> All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Notificación Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-bold opacity-0 transition-opacity pointer-events-none z-[100]">
+        ¡Código CALIMBAS copiado!
+    </div>
+
+    <!-- Botón WhatsApp Flotante (Solo en móviles) -->
+    <a href="https://wa.me/5491153842626" target="_blank" class="fixed bottom-6 right-6 z-50 md:hidden bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl floating-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Función para copiar el código
+        function copyCode() {
+            const code = "CALIMBAS";
+            const el = document.createElement('textarea');
+            el.value = code;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            setTimeout(() => { toast.style.opacity = '0'; }, 3000);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
