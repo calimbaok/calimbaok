@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asegúrate de pasarla bien - Calimbas x Assist365</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="components/footer.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="images/favicon-32x32.png"/>
+    <!-- Headmao -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vtl60y2cc5");
+    </script>
+    <style>
+        :root {
+            --color-teal: #00A1B2;
+            --color-cyan: #0086B4;
+            --color-blue: #006BB5;
+            --color-dark-blue: #014E7F;
+            --color-navy: #023047;
+            --color-yellow: #FFB703;
+            --color-orange-light: #FD9E02;
+            --color-orange: #FB8500;
+        }
+
+        body { font-family: 'Poppins', sans-serif; }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-blue) 100%);
+        }
+
+        .soccer-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/0000/svg'%3E%3Cpath d='M30 0l5.878 18.09h19.022l-15.39 11.18 5.878 18.09-15.388-11.18-15.39 11.18 5.878-18.09-15.39-11.18h19.022L30 0z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-6deg); }
+            50% { transform: translateY(-15px) rotate(-3deg); }
+            100% { transform: translateY(0px) rotate(-6deg); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        .btn-primary {
+            background-color: var(--color-yellow);
+            color: var(--color-navy);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--color-orange-light);
+            transform: scale(1.05);
+        }
+
+        .text-accent { color: var(--color-teal); }
+        .bg-navy { background-color: var(--color-navy); }
+        .border-teal { border-color: var(--color-teal); }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold" style="background-color: var(--color-cyan);">C</div>
+                <a href="index.html" class="font-extrabold text-xl tracking-tight" style="color: var(--color-navy); text-decoration:none;">
+                  CALIMBAS
+                </a>
+            </div>
+            <a href="#codigo" class="text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-md" style="background-color: var(--color-blue);">
+                Obtener Descuento
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 hero-gradient overflow-hidden soccer-pattern" style="color: var(--color-blue);">
+        <div class="max-w-6xl mx-auto px-6 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <span class="inline-block px-4 py-1 rounded-full text-sm font-bold mb-6 animate-pulse uppercase tracking-wider" style="background-color: var(--color-teal); color: white;">
+                    🏆 Especial Mundial
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    60% + 15% adicional con nuestro código.
+                </h1>
+                <p class="text-xl mb-8 max-w-xl opacity-90">
+                    Que nada te detenga. Viajá con el respaldo de <b>ASSIST365</b> usando nuestro código exclusivo. Nosotras te esperamos acá 😉.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button onclick="scrollToSection('codigo')" class="btn-primary px-8 py-4 rounded-xl font-bold text-lg shadow-xl">
+                        Conseguir Descuento
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Boarding Pass -->
+            <div class="lg:w-1/2 flex justify-center">
+                <div class="relative w-72 h-72 lg:w-96 lg:h-96 animate-float">
+                    <div class="absolute inset-0 rounded-full blur-3xl opacity-20" style="background-color: var(--color-teal);"></div>
+                    <div class="relative bg-white p-6 rounded-2xl shadow-2xl text-slate-800 transform">
+                        <div class="flex justify-between items-center mb-6">
+                            <i data-lucide="plane" style="color: var(--color-cyan);"></i>
+                            <span class="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Boarding Pass</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase font-bold">Código Calimbas</p>
+                                <p class="text-2xl font-black tracking-widest" style="color: var(--color-blue);">CALIMBA</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase font-bold">Cobertura por</p>
+                                <p class="font-bold text-gray-800">ASSIST365</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-dashed border-gray-200 flex justify-between items-end">
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase">Destino</p>
+                                <p class="font-bold">SEDES MUNDIAL</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[10px] text-gray-400 uppercase">Estado</p>
+                                <p class="font-bold text-green-600">ACTIVO ✓</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Elemento decorativo Shield -->
+                    <div class="absolute -bottom-4 -right-4 p-4 rounded-xl shadow-lg transform rotate-12" style="background-color: var(--color-yellow);">
+                        <i data-lucide="shield-check" style="color: var(--color-navy);" class="w-8 h-8"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-20 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4" style="color: var(--color-navy);">Si ya vas a gastar miles en el Mundial…</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                entradas, vuelos y hoteles pueden costar una fortuna. Pero hay algo que puede salir mucho más caro si no lo tenés cubierto. Mirá estas comparaciones antes de viajar.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all border-b-4" style="border-bottom-color: var(--color-teal);">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style="background-color: #f0fdfa;">
+                    <i data-lucide="ticket" style="color: var(--color-teal);"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Entrada al mundial 800 USD</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                Una consulta médica en EE.UU.: <strong class="text-red-600">1.500 dólares</strong>.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all border-b-4" style="border-bottom-color: var(--color-cyan);">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style="background-color: #f0f9ff;">
+                    <i data-lucide="bed-double" style="color: var(--color-cyan);"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">El hotel te cuesta 250 dólares por noche</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Una noche en hospital puede costarte <strong class="text-red-600"> 5.000 dólares.</strong>.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all border-b-4" style="border-bottom-color: var(--color-orange);">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-6" style="background-color: #fffaf0;">
+                    <i data-lucide="trophy" style="color: var(--color-orange);"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Imaginate viajar al Mundial…</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    y perderte el partido por terminar <strong class="text-red-600">en un hospital</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Section -->
+    <section id="codigo" class="py-20 overflow-hidden relative" style="background-color: var(--color-navy);">
+        <div class="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 opacity-10" style="background-color: white;"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color: var(--color-navy);">¡Tu regalo mundialista! ⚽️</h2>
+                <p class="text-gray-600 mb-8 text-lg">Copiá este código y aplicalo en la web de <b>ASSIST365</b> para obtener tu descuento.</p>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 p-6 rounded-2xl border-2 border-dashed" style="background-color: #f8fafc; border-color: var(--color-cyan);">
+                    <span id="promo-code" class="text-4xl font-black tracking-widest uppercase" style="color: var(--color-blue);">CALIMBA</span>
+                    <button onclick="copyCode()" id="copy-btn" class="flex items-center gap-2 text-white px-6 py-3 rounded-xl font-bold transition-all active:scale-95 shadow-lg" style="background-color: var(--color-cyan);">
+                        <i data-lucide="copy" class="w-5 h-5"></i>
+                        Copiá el código
+                    </button>
+                </div>
+
+                <div class="mt-10 pt-10 border-t border-gray-100 flex flex-col items-center">
+                    <p class="font-semibold mb-4" style="color: var(--color-navy);">Hacé click para cotizar en Assist365:</p>
+                    <a href="https://assist-365.com" target="_blank" class="inline-flex items-center gap-2 text-xl font-bold underline decoration-2 underline-offset-4 transition-colors" style="color: var(--color-blue); decoration-color: var(--color-yellow);">
+                        Ir a la web de Assist365 <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-4 mb-8">
+                <span class="font-black text-xl" style="color: var(--color-navy);">CALIMBAS</span>
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-teal);"></span>
+                <span class="font-bold text-gray-500">ASSIST365</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-8 leading-relaxed max-w-md mx-auto">
+                Calimbas comparte este código como beneficio para su comunidad. <br>
+                La asistencia, seguros y condiciones son brindados directamente por <b>ASSIST365</b>.
+            </p>
+            <div class="flex justify-center gap-6 mb-8 text-gray-400">
+                <a href="https://www.instagram.com/combicalimbaok/" target="_blank" rel="noopener noreferrer">
+                  <i data-lucide="instagram" class="hover:text-teal-500 cursor-pointer transition-colors"></i>
+                </a>
+                <i data-lucide="shield-check" class="hover:text-teal-500 cursor-pointer transition-colors"></i>
+            </div>
+            <h2 class="text-lg mt-4 uppercase tracking-[0.3em] font-bold">
+              <a href="https://assist-365.com/ar/mundial-2026/argentina/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:opacity-80 transition"
+                style="color: var(--color-cyan);">
+                Nosotras te esperamos acá 😉
+              </a>
+            </h2>
+        </div>
+    </footer>
+    <!--FOOTER-->
+    <footer>
+      <div class="content mb-0">
+
+        <div class="left box">
+          <div class="upper">
+            <div class="topic"><strong>Lo que creemos</strong></div>
+            <p>"Nuestro pasado, nuestro presente y lo que queda de nuestro futuro
+            depende absolutamente de lo que haremos hoy".</p>
+            <p> Silvya Earle</p>
+          </div>
+        </div>
+
+        <div class="right box text-right">
+          <div class="topic"><strong>Redes Sociales</strong></div>
+
+          <div class="media-icons">
+            <a href="https://www.instagram.com/combicalimbaok/" target="_blank">
+              <i class="fa-brands fa-instagram text-white text-2xl"></i>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UC6gKILvZxRGYUyy86tbJ9VA" target="_blank">
+              <i class="fa-brands fa-youtube text-white text-2xl"></i>
+            </a>
+          </div>
+
+          <div class="footer-copyright">
+            <p class="text-right">
+              Comparti con <i class="fas fa-heart"></i><br>
+              Copyright © 2023 <strong>giseAres</strong> All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Notificación Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 text-white px-8 py-4 rounded-2xl text-sm font-bold shadow-2xl opacity-0 transition-all translate-y-4 pointer-events-none z-[100]" style="background-color: var(--color-navy);">
+        <div class="flex items-center gap-3">
+             <i data-lucide="check-circle-2" class="text-green-400"></i>
+             ¡Código CALIMBA copiado!
+        </div>
+    </div>
+
+    <script>
+        // Inicialización de iconos Lucide
+        function initIcons() {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', initIcons);
+
+        // Función para scroll suave
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if(element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Función para copiar código
+        function copyCode() {
+            const code = document.getElementById('promo-code').innerText;
+            const btn = document.getElementById('copy-btn');
+            const toast = document.getElementById('toast');
+
+            // Clipboard
+            const el = document.createElement('textarea');
+            el.value = code;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            // UI Feedback
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = '¡Copiado!';
+            btn.style.backgroundColor = '#10b981'; // Green
+            initIcons();
+
+            // Toast Animation
+            toast.classList.replace('opacity-0', 'opacity-100');
+            toast.classList.replace('translate-y-4', 'translate-y-0');
+
+            setTimeout(() => {
+                btn.innerHTML = originalContent;
+                btn.style.backgroundColor = 'var(--color-cyan)';
+                toast.classList.replace('opacity-100', 'opacity-0');
+                toast.classList.replace('translate-y-0', 'translate-y-4');
+                initIcons();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
