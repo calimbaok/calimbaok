@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Calimba – Profesionales en el camino</title>
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para los iconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://kit.fontawesome.com/1c9687f1ac.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="icon" type="image/jpg" href="images/favicon-32x32.png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilos específicos para la generación del PDF */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+                color: black !important;
+            }
+            main {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            section {
+                break-inside: avoid;
+                border: 1px solid #e2e8f0 !important;
+                padding: 1.5rem !important;
+                margin-bottom: 2rem !important;
+                border-radius: 0.75rem !important;
+            }
+            .bg-slate-900 {
+                background-color: #0f172a !important;
+                color: white !important;
+            }
+            .text-orange-500 {
+                color: #f97316 !important;
+            }
+            h1 {
+                font-size: 32pt !important;
+            }
+        }
+
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- Barra de Navegación -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 no-print">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="compass" class="text-orange-500 w-6 h-6"></i>
+                <a href="index.html" class="text-xl md:text-2xl font-bold tracking-tighter text-teal-700 no-underline cursor-pointer">
+                  CALIMBAS <span class="text-gray-400 font-light">| Guía</span>
+                </a>
+
+            </div>
+            <button onclick="window.print()" class="flex items-center gap-2 bg-slate-900 text-white px-5 py-2 rounded-full font-bold hover:bg-orange-600 transition-all active:scale-95 shadow-md shadow-slate-200 text-sm">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                Descargar PDF
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-16 space-y-20">
+
+        <!-- Hero Section -->
+        <header class="text-center space-y-6 pb-12 border-b border-slate-100">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+                Guía Calimba – <br />
+                <span class="text-orange-500">Profesionales en el camino</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl font-medium text-slate-600">
+                Cómo empezar a vivir viajando (siendo o no nómade digital)
+            </h2>
+            <div class="inline-block bg-slate-100 px-4 py-2 rounded-lg font-bold text-slate-700 text-sm">
+                Versión definitiva con nuestras apps reales + links de descuento
+            </div>
+        </header>
+
+        <!-- 1. Antes de salir -->
+        <section class="space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="text-4xl font-black text-orange-200 shrink-0">1.</span>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Antes de salir: cambiar de vida sin cerrar los ojos</h3>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                        Vivir viajando no es alargar las vacaciones: es construir una vida entera arriba de la ruta. Cambiás estabilidad por movimiento, certezas por mapas y horarios de oficina por amaneceres que nunca son iguales. Eso suena romántico, pero si no lo mirás de frente, puede volverse abrumador.
+                    </p>
+                    <div class="bg-orange-50 p-6 rounded-2xl border border-orange-100 space-y-4">
+                        <p class="font-bold text-slate-900">Antes de vender todo, renunciar o subirte al avión, hacete tres preguntas honestas:</p>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="text-orange-500 font-bold">•</span>
+                                <p>¿Cuánto tiempo quiero probar este estilo de vida: unos meses, un año, sin fecha?</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-500 font-bold">•</span>
+                                <p>¿Cuántos meses de gastos tengo cubiertos si hoy mismo dejaran de entrar ingresos?</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-500 font-bold">•</span>
+                                <p>¿Qué pasa con mi salud, mi familia y mis responsabilidades si me voy?</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-slate-700 font-medium italic">
+                        Responderte sin autoengañarte es tu primer acto profesional como viajero: no se trata de juntarse coraje y lanzarse al vacío, sino de construir un plan que te sostenga mientras el mapa cambia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Elegir tu estilo -->
+        <section class="space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="text-4xl font-black text-orange-200 shrink-0">2.</span>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900">Elegir tu estilo de viaje (y no el de Instagram)</h3>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                        No existen "los" nómades digitales ni "la" forma correcta de vivir viajando. Existen personas reales, con trabajos, historias, miedos, talentos y cuentas para pagar. La clave es diseñar un estilo de viaje que acompañe TU realidad, no una foto idealizada.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-5 bg-white border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-orange-600 mb-2">Viaje lento con base</h4>
+                            <p class="text-sm text-slate-600 leading-snug">Te quedás semanas o meses. Trabajás con buenos horarios, descubrís la zona sin correr, armás pequeñas rutinas.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-orange-600 mb-2">Ruta constante</h4>
+                            <p class="text-sm text-slate-600 leading-snug">Cada pocos días cambiás de lugar. Sumás paisajes a toda velocidad, pero necesitás más energía y flexibilidad.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-slate-200 rounded-xl">
+                            <h4 class="font-bold text-orange-600 mb-2">Temporadas</h4>
+                            <p class="text-sm text-slate-600 leading-snug">Viajás X meses, volvés a base, recargás ahorros y energía. Opción sana para no cortar con tu entorno.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 text-white p-5 rounded-xl text-center italic text-sm">
+                        <p>Pregunta Calimba: ¿Qué estilo te permite seguir siendo profesional, cumplir con tu palabra y cuidar tu salud mental?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Herramientas -->
+        <section class="space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="text-4xl font-black text-orange-200 shrink-0">3.</span>
+                <div class="space-y-6 flex-1">
+                    <h3 class="text-2xl font-bold text-slate-900">Herramientas y aplicaciones que HACEMOS funcionar (las que USAMOS)</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-5 items-center p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200 shrink-0 shadow-sm text-orange-500">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">3.1 iOverlander</h4>
+                                <p class="text-slate-600 text-sm">GPS para pernoctar, talleres, agua y fronteras. Cada pin es una experiencia real.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 items-center p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200 shrink-0 shadow-sm text-blue-500">
+                                <i data-lucide="navigation"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">3.2 Fuelio</h4>
+                                <p class="text-slate-600 text-sm">Control de combustible. Seguimos consumo para detectar fallas mecánicas.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 items-center p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200 shrink-0 shadow-sm text-emerald-500">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">3.3 TravelSpend</h4>
+                                <p class="text-slate-600 text-sm">Gastos reales. Regla: si lo gastaste, lo anotaste antes de apagar el celular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Conectividad -->
+        <section class="space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="text-4xl font-black text-orange-200 shrink-0">4.</span>
+                <div class="space-y-6 flex-1">
+                    <h3 class="text-2xl font-bold text-slate-900">Conectividad: cómo tener internet donde importa</h3>
+                    <div class="bg-slate-900 text-white rounded-3xl p-8 relative overflow-hidden border border-orange-500/20">
+                        <div class="relative z-10 space-y-6">
+                            <h4 class="text-xl font-bold text-orange-400">Starlink: trabajar desde el medio de la nada</h4>
+                            <p class="text-slate-300 text-sm">Internet satelital para lugares remotos. Conexión estable para videollamadas.</p>
+                            <a href="https://starlink.com/residential?referral=RC-DF-7575733-59611-57" target="_blank" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-6 rounded-xl transition-all no-print">
+                                Descuento Starlink <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <i data-lucide="wifi" class="absolute top-0 right-0 opacity-5 -m-10 w-60 h-60"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Asistencia -->
+        <section class="bg-blue-600 text-white rounded-3xl p-8 md:p-12 space-y-8 shadow-xl shadow-blue-100">
+            <div class="flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+                <i data-lucide="shield-check" class="w-16 h-16 text-blue-200"></i>
+                <div class="space-y-4">
+                    <h3 class="text-3xl font-bold">5. Asistencia al viajero</h3>
+                    <p class="text-blue-100">Tu red de seguridad. Una internación puede costar tanto como un vehículo.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 no-print">
+                <a href="https://assist-365.com/?voucher=CALIMBA" target="_blank" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-blue-50 transition-all flex items-center gap-2">
+                    Descuento Assist-365
+                </a>
+                <a href="https://wa.me/5491153842626" target="_blank" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-xl border border-blue-400/50">
+                    WhatsApp +54 9 11 5384 2626
+                </a>
+            </div>
+        </section>
+
+        <!-- 8. Ingresos -->
+        <section class="bg-orange-50 border border-orange-100 rounded-3xl p-8 space-y-6">
+            <div class="flex items-start gap-4">
+                <span class="text-4xl font-black text-orange-200 shrink-0">8.</span>
+                <div class="space-y-6 flex-1">
+                    <h3 class="text-2xl font-bold">Generar ingresos en movimiento</h3>
+                    <p class="text-slate-700 italic text-sm">"Sistema: horario fijo, herramientas protegidas, compromiso con entregas."</p>
+                    <div class="flex flex-col md:flex-row gap-4 no-print">
+                        <a href="https://linktr.ee/profesionalesenelcamino" target="_blank" class="flex-1 bg-slate-900 text-white font-bold py-3 px-6 rounded-xl text-center flex items-center justify-center gap-2">
+                            Coaching Calimba <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Próximos pasos -->
+        <footer class="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16 text-center space-y-8">
+            <h3 class="text-3xl font-bold text-orange-400">10. Próximos pasos</h3>
+            <p class="text-slate-400 max-w-xl mx-auto italic">
+                Usala como checklist, compartila con quien duda en salir y escribinos para personalizar tu plan.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 no-print">
+                <button onclick="window.print()" class="bg-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-400">Guardar PDF</button>
+                <a href="https://wa.me/5491153842626" target="_blank" class="bg-white/10 border border-white/20 px-8 py-3 rounded-xl font-bold">Consultar dudas</a>
+            </div>
+        </footer>
+
+    </main>
+      <!--FOOTER-->
+        <footer>
+          <div class="content mb-0">
+
+            <div class="left box">
+              <div class="upper">
+                <div class="topic"><strong>Lo que creemos</strong></div>
+                <p>"Nuestro pasado, nuestro presente y lo que queda de nuestro futuro
+                depende absolutamente de lo que haremos hoy".</p>
+                <p> Silvya Earle</p>
+              </div>
+            </div>
+
+            <div class="right box text-right">
+              <div class="topic"><strong>Redes Sociales</strong></div>
+
+              <div class="media-icons">
+                <a href="https://www.instagram.com/combicalimbaok/" target="_blank">
+                  <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UC6gKILvZxRGYUyy86tbJ9VA" target="_blank">
+                  <i class="fa-brands fa-youtube text-white text-2xl"></i>
+                </a>
+              </div>
+
+              <div class="footer-copyright">
+                <p class="text-right">
+                  Comparti con <i class="fas fa-heart"></i><br>
+                  Copyright © 2023 <strong>giseAres</strong> All rights reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
